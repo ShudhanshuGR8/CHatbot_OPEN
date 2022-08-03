@@ -8,6 +8,9 @@ from torch.utils.data import Dataset, DataLoader
 
 from nltk_utils import bag_of_words, tokenize, stem
 from model import NeuralNet
+import nltk
+nltk.download('punkt')
+
 
 with open('intents.json', 'r') as f:
     intents = json.load(f)
